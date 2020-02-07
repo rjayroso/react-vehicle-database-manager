@@ -20,7 +20,6 @@ class listVehicle extends Component {
       })
       .then(responseData => {
         this.setState({ vehicles: responseData });
-        //console.log(responseData);
       })
       .catch(error => {
         console.log(error);

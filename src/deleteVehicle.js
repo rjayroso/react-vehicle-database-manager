@@ -36,7 +36,7 @@ class deleteVehicle extends Component {
   }
 
   handleSubmit(e) {
-    const deleteUrl = `https://rjayroso-ong.herokuapp.com/api/vehicles/delete/${this.props.id}`;
+    const deleteUrl = `https://bti-webapi.herokuapp.com/api/vehicles/delete/${this.props.id}`;
 
     fetch(deleteUrl, { method: "DELETE" })
       .then(response => {

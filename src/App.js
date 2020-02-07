@@ -14,30 +14,29 @@ class App extends Component {
       <div className="container">
         <Navbar className="navbar navbar-default" />
         <Header />
-
         <hr />
-
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/vehicles" render={() => <listVehicle />} />
+          <Route 
+            exact path="/" 
+            render={() => <Home />} />
+          <Route 
+            exact path="/vehicles" 
+            ender={() => <listVehicle />} 
+            />
           <Route
-            exact
-            path="/vehicles/add"
+            exact path="/vehicles/add"
             render={() => <addVehicle />}
           />
           <Route
-            exact
-            path="/vehicles/details/:id"
+            exact path="/vehicles/details/:id"
             render={props => <detailsVehicle id={props.match.params.id} />}
           />
           <Route
-            exact
-            path="/vehicles/edit/:id"
+            exact path="/vehicles/edit/:id"
             render={props => <editVehicle id={props.match.params.id} />}
           />
           <Route
-            exact
-            path="/vehicles/delete/:id"
+            exact path="/vehicles/delete/:id"
             render={props => <deleteVehicle id={props.match.params.id} />}
           />
           <Route render={() => <NotFound />} />
