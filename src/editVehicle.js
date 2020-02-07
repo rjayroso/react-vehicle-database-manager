@@ -35,7 +35,7 @@ class EditVehicle extends Component {
   }
 
   componentDidMount() {
-    const getUrl = `https://bti-webapi.herokuapp.com/api/vehicles/${this.props.id}`;
+    const getUrl = `https://bti-webapi.herokuapp.com/api/cars/${this.props.id}`;
 
     fetch(getUrl)
       .then(response => {

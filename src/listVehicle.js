@@ -112,16 +112,16 @@ const TableRow = props => {
       <td className="d-inline-flex">
         <Link
           className="btn btn-primary"
-          to={`/vehicles/details/${v._id}`}
+          to={`/cars/details/${v._id}`}
         >
           Details
         </Link>
         &nbsp;&nbsp;
-        <Link className="btn btn-warning" to={`/vehicles/edit/${v._id}`}>
+        <Link className="btn btn-warning" to={`/cars/edit/${v._id}`}>
           Edit
         </Link>
         &nbsp;&nbsp;
-        <Link className="btn btn-danger" to={`/vehicles/delete/${v._id}`}>
+        <Link className="btn btn-danger" to={`/cars/delete/${v._id}`}>
           Delete
         </Link>
       </td>
