@@ -35,7 +35,7 @@ class EditVehicle extends Component {
   }
 
   componentDidMount() {
-    const getUrl = `https://bti-webapi.herokuapp.com/api/cars/${this.props.id}`;
+    const getUrl = `https://bti-webapi.herokuapp.com/api/cars/details/${this.props.id}`;
 
     fetch(getUrl)
       .then(response => {
@@ -120,7 +120,7 @@ class EditVehicle extends Component {
 
     const isDisabled = this.state.vehicle.car_make === 0;
 
-    const vehicle = this.state.vehicle;
+    const v = this.state.vehicle;
 
     if (this.input && this.state.vehicle.car_make === 0) {
       this.input.focus();
@@ -129,8 +129,8 @@ class EditVehicle extends Component {
     return (
       <div>
         <h4>
-          Edit vehicle {vehicle.car_make} {vehicle.car_model} {vehicle.car_year}{" "}
-          ({vehicle.vin})
+          Edit vehicle {v.car_make} {v.car_model} {v.car_year}{" "}
+          ({v.vin})
         </h4>
 
         {this.state.httpStatusOk ? (
@@ -147,7 +147,7 @@ class EditVehicle extends Component {
                     this.input = i;
                   }}
                   onChange={this.handleChange}
-                  placeholder={vehicle.car_make}
+                  placeholder={v.car_make}
                 />
               </div>
               <div className="form-group">
@@ -156,7 +156,7 @@ class EditVehicle extends Component {
                   name="car_model"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.car_model}
+                  placeholder={v.car_model}
                 />
               </div>
               <div className="form-group">
@@ -165,7 +165,7 @@ class EditVehicle extends Component {
                   name="car_year"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.car_year}
+                  placeholder={v.car_year}
                 />
               </div>
               <div className="form-group">
@@ -174,7 +174,7 @@ class EditVehicle extends Component {
                   name="vin"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.vin}
+                  placeholder={v.vin}
                 />
               </div>
               <div className="form-group">
@@ -183,7 +183,7 @@ class EditVehicle extends Component {
                   name="msrp"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.msrp}
+                  placeholder={v.msrp}
                 />
               </div>
               <div className="form-group">
@@ -192,7 +192,7 @@ class EditVehicle extends Component {
                   name="photo"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.photo}
+                  placeholder={v.photo}
                 />
               </div>
               <div className="form-group">
@@ -201,7 +201,7 @@ class EditVehicle extends Component {
                   name="purchase_date"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.purchase_date}
+                  placeholder={v.purchase_date}
                 />
               </div>
               <div className="form-group">
@@ -210,7 +210,7 @@ class EditVehicle extends Component {
                   name="purchaser_name"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.purchaser_name}
+                  placeholder={v.purchaser_name}
                 />
               </div>
               <div className="form-group">
@@ -219,7 +219,7 @@ class EditVehicle extends Component {
                   name="purchaser_email"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.purchaser_email}
+                  placeholder={v.purchaser_email}
                 />
               </div>
               <div className="form-group">
@@ -228,7 +228,7 @@ class EditVehicle extends Component {
                   name="purchaser_phone"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.purchaser_phone}
+                  placeholder={v.purchaser_phone}
                 />
               </div>
               <div className="form-group">
@@ -237,7 +237,7 @@ class EditVehicle extends Component {
                   name="price_paid"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.price_paid}
+                  placeholder={v.price_paid}
                 />
               </div>
               <div className="form-group">
@@ -246,7 +246,7 @@ class EditVehicle extends Component {
                   name="paint_color"
                   className="form-control"
                   onChange={this.handleChange}
-                  placeholder={vehicle.paint_color}
+                  placeholder={v.paint_color}
                 />
               </div>
               <div className="form-group">
