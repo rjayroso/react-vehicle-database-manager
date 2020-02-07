@@ -35,7 +35,7 @@ class editVehicle extends Component {
   }
 
   componentDidMount() {
-    const getUrl = `https://bti-webapi.herokuapp.com/api/${this.props.id}`;
+    const getUrl = `https://bti-webapi.herokuapp.com/api/vehicles/${this.props.id}`;
 
     fetch(getUrl)
       .then(response => {
@@ -91,7 +91,7 @@ class editVehicle extends Component {
       paint_color: this.state.paint_color
     };
 
-    const putUrl = `https://bti-webapi.herokuapp.com/api/edit/${this.props.id}`;
+    const putUrl = `https://bti-webapi.herokuapp.com/api/vehicles/edit/${this.props.id}`;
 
     fetch(putUrl, {
       method: "PUT",

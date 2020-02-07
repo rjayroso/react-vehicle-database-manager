@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 class listVehicle extends Component {
   state = { vehicles: [] };
 
-
-
   componentDidMount() {
 
     const url = 'https://bti-webapi.herokuapp.com/api/vehicles';
@@ -13,7 +11,6 @@ class listVehicle extends Component {
     fetch(url)
       .then(response => {
         if (response.ok) {
-            console.log(response);
           return response.json();
         } else if (response.status === 404) {
           throw Error("HTTP 404, Not found");
