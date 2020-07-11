@@ -11,7 +11,8 @@ class DeleteVehicle extends Component {
   state = { vehicle: {}, httpStatusCode: 0, httpStatusOk: false };
 
   componentDidMount() {
-    const getUrl = `https://bti-webapi.herokuapp.com/api/cars/${this.props.id}`;
+                //  `https://bti-webapi.herokuapp.com/api/cars/edit/${this.props.id}`;
+    const getUrl =  `https://bti-webapi.herokuapp.com/api/cars/details/${this.props.id}`;
 
     fetch(getUrl)
       .then(response => {
@@ -49,7 +50,7 @@ class DeleteVehicle extends Component {
         }
       })
       .then(responseData => {
-        this.props.history.push("/vehicles");
+        this.props.history.push("/react-vehicle-database-manager/cars");
       })
       .catch(error => {
         console.log(error);
@@ -63,16 +64,15 @@ class DeleteVehicle extends Component {
     const vehicle = this.state.vehicle;
 
     return (
-      <div>
-        <h4>
+      <React.Fragment>
+        <h4 style={headerStyle}>
           Delete vehicle {vehicle.car_make} {vehicle.car_model}{" "}
           {vehicle.car_year}
         </h4>
-
         {this.state.httpStatusOk ? (
-          <div className="row">
-            <div className="col-md-6">
-              <dl className="dl-horizontal">
+          <div style={divStyle}>
+            <div>
+              <dl>
                 <dt>Database ID</dt>
                 <dd>{vehicle._id}</dd>
                 <dt>VIN</dt>
@@ -101,8 +101,8 @@ class DeleteVehicle extends Component {
                 <dd>{vehicle.paint_color}</dd>
               </dl>
             </div>
-            <div className="col-md-2">
-              <img src={vehicle.photo} alt="" className="img-responsive" />
+            <div>
+              <img src={vehicle.photo} alt=""/>
             </div>
           </div>
         ) : (
@@ -115,17 +115,28 @@ class DeleteVehicle extends Component {
           the list of vehicles.
         </p>
         <p>
-          <button onClick={this.handleSubmit} className="btn btn-danger">
-            Confirm delete
-          </button>
+          <button onClick={this.handleSubmit}>Confirm delete</button>
           &nbsp;&nbsp;
-          <Link className="btn btn-default" to="/vehicles">
+          <Link to="/react-vehicle-database-manager/cars">
             Cancel
           </Link>
         </p>
-      </div>
+      </React.Fragment>
     );
   }
+}
+
+const divStyle = {
+  paddingLeft: "70px"
+}
+
+const headerStyle = {
+  paddingLeft: "70px",
+  paddingTop: "20px", 
+  height: "40px",
+  background: "#d1d1d1",
+  margin: "0 auto",
+  verticalAlign: "middle"
 }
 
 export default withRouter(DeleteVehicle);

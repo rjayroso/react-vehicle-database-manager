@@ -33,12 +33,6 @@ state = { vehicles: [] };
 
     return (
       <div className="container-fluid">
-        <h4>Vehicles</h4>
-        <p>
-          <Link className="btn btn-primary" to="/cars/add">
-            Add New Vehicle
-          </Link>
-        </p>
         <div
           className="container table-responsive"
           style={{ maxWidth: "100%", maxHeight: "100%" }}
@@ -110,18 +104,15 @@ const TableRow = props => {
       <td>{v.price_paid}</td>
       <td>{v.paint_color}</td>
       <td className="d-inline-flex">
-        <Link
-          className="btn btn-primary"
-          to={`/cars/details/${v._id}`}
-        >
+        <Link to={`/react-vehicle-database-manager/cars/details/${v._id}`}>
           Details
         </Link>
         &nbsp;&nbsp;
-        <Link className="btn btn-warning" to={`/cars/edit/${v._id}`}>
+        <Link to={`/react-vehicle-database-manager/cars/edit/${v._id}`}>
           Edit
         </Link>
         &nbsp;&nbsp;
-        <Link className="btn btn-danger" to={`/cars/delete/${v._id}`}>
+        <Link to={`/react-vehicle-database-manager/cars/delete/${v._id}`}>
           Delete
         </Link>
       </td>

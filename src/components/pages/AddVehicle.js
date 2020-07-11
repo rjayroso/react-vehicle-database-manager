@@ -93,11 +93,12 @@ class AddVehicle extends Component {
 
     return (
       <div>
-        <h4>Add a new vehicle</h4>
+        <h4 style={headerStyle}>Add a new vehicle</h4>
+
         {/* <form onSubmit={this.handleSubmit}> */}
-        <div className="container">
+        <div style={divStyle}>
           <p>Enter new vehicle data:</p>
-          <hr />
+          
           <form>
             <div className="form-group">
               <label htmlFor="car_make">Car Make</label>
@@ -200,16 +201,15 @@ class AddVehicle extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="col-auto">
+            <div>
               <button
                 disabled={isDisabled}
                 onClick={this.handleSubmit}
-                className="btn btn-success"
               >
                 Add Vehicle
               </button>
               &nbsp;&nbsp;
-              <Link className="btn btn-primary" to="/cars">
+              <Link to="/react-vehicle-database-manager/cars">
                 Cancel
               </Link>
             </div>
@@ -219,6 +219,19 @@ class AddVehicle extends Component {
       </div>
     );
   }
+}
+
+const divStyle = {
+  paddingLeft: "70px"
+}
+
+const headerStyle = {
+  paddingLeft: "70px",
+  paddingTop: "20px", 
+  height: "40px",
+  background: "#d1d1d1",
+  margin: "0 auto",
+  verticalAlign: "middle"
 }
 
 export default withRouter(AddVehicle);

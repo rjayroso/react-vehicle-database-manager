@@ -128,15 +128,14 @@ class EditVehicle extends Component {
 
     return (
       <div>
-        <h4>
+        <h4 style={headerStyle}>
           Edit vehicle {v.car_make} {v.car_model} {v.car_year}{" "}
           ({v.vin})
         </h4>
 
         {this.state.httpStatusOk ? (
-          <div className="container">
+          <div style={divStyle}>
             <p>Edit vehicle data:</p>
-            <hr />
             <form>
               <div className="form-group">
                 <label htmlFor="car_make">Car Make</label>
@@ -253,14 +252,11 @@ class EditVehicle extends Component {
                 <button
                   disabled={isDisabled}
                   onClick={this.handleSubmit}
-                  className="btn btn-success"
                 >
                   Save
                 </button>
                 &nbsp;&nbsp;
-                <Link className="btn btn-primary" to="/cars">
-                  Cancel
-                </Link>
+                <Link to="/react-vehicle-database-manager/cars">Cancel</Link>
               </div>
             </form>
           </div>
@@ -271,15 +267,26 @@ class EditVehicle extends Component {
             </p>
             <hr />
             <p>
-              <Link className="btn btn-default" to="/cars">
-                Show list of vehicles
-              </Link>
+              <Link to="/react-vehicle-database-manager/cars">Show list of vehicles</Link>
             </p>
           </div>
         )}
       </div>
     );
   }
+}
+
+const divStyle = {
+  paddingLeft: "70px"
+}
+
+const headerStyle = {
+  paddingLeft: "70px",
+  paddingTop: "20px", 
+  height: "40px",
+  background: "#d1d1d1",
+  margin: "0 auto",
+  verticalAlign: "middle"
 }
 
 export default withRouter(EditVehicle);
