@@ -26,7 +26,7 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route 
-            exact path="/react-vehicle-database-manager/home" 
+            exact path="/react-vehicle-database-manager/" 
             render={() => <Home />} />
           <Route
             exact path="/react-vehicle-database-manager/about"

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <div style={headerStyle}>
-            <Link style={linkStyle} to="/react-vehicle-database-manager/home" className="navbar-brand">
+            <Link style={linkStyle} to="/react-vehicle-database-manager/" className="navbar-brand">
                 Home
             </Link>
             &nbsp; | &nbsp;
