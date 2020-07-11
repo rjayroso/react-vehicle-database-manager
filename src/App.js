@@ -10,7 +10,6 @@ import AddVehicle from "./components/pages/AddVehicle";
 import Home from "./components/pages/Home"
 import NotFound from "./components/pages/NotFound";
 
-
 import DeleteVehicle from "./components/Vehicle/DeleteVehicle";
 import DetailsVehicle from "./components/Vehicle/DetailsVehicle";
 import EditVehicle from "./components/Vehicle/EditVehicle";
@@ -27,14 +26,16 @@ class App extends Component {
         <Switch>
           <Route 
             exact path="/react-vehicle-database-manager/" 
-            render={() => <Home />} />
+            render={() => <Home />} 
+          />
           <Route
             exact path="/react-vehicle-database-manager/about"
-            render={() => <About />} />
+            render={() => <About />} 
+          />
           <Route 
             exact path="/react-vehicle-database-manager/cars" 
             render={() => <ListVehicle />} 
-            />
+          />
           <Route
             exact path="/react-vehicle-database-manager/cars/add"
             render={() => <AddVehicle />}

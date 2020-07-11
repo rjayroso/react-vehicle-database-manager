@@ -32,7 +32,7 @@ class DetailsVehicle extends Component {
   }
 
   render() {
-    document.title = `vehicle ${this.props.id} detail`;
+    document.title = `Vehicle ${this.props.id} detail`;
 
     // For coding convenience, create a shortcut object
     const vehicle = this.state.vehicle;

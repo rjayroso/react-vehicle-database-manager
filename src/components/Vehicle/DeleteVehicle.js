@@ -11,7 +11,6 @@ class DeleteVehicle extends Component {
   state = { vehicle: {}, httpStatusCode: 0, httpStatusOk: false };
 
   componentDidMount() {
-                //  `https://bti-webapi.herokuapp.com/api/cars/edit/${this.props.id}`;
     const getUrl =  `https://bti-webapi.herokuapp.com/api/cars/details/${this.props.id}`;
 
     fetch(getUrl)
