@@ -32,3 +32,9 @@ npm install
 npm start
 ```
 Once it has successfuly compiled, you can go to http://localhost:3000/ to see the development server in action.
+# Author
+- [Royce Ayroso-Ong](https://github.com/rjayroso)
+# License
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rjayroso/react-vehicle-database-manager/blob/master/LICENSE) file for details.
+# Acknowledgments
+This project of mine was inspired from my BTI425 course "Web Programming for Apps and Services" of the Seneca College Software Development program. 
