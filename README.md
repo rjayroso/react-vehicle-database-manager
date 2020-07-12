@@ -37,4 +37,4 @@ Once it has successfuly compiled, you can go to http://localhost:3000/ to see th
 ## License :page_facing_up:
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rjayroso/react-vehicle-database-manager/blob/master/LICENSE) file for details.
 ## Acknowledgments :bulb:
-This project of mine was inspired from my web course "Web Programming for Apps and Services" of the Seneca College Software Development program. 
+This project of mine was inspired from my web course "Web Programming for Apps and Services" of the Seneca College Software Development program.
