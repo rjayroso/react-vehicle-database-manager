@@ -1,15 +1,14 @@
-# react-vehicle-database-manager
+# Vehicle Database Manager
 Vehicle Database Manager is a React app that uses my online web API to pull from a personal MongoDB database to populate and manage a list of cars.
 ## Features
--
--
--
+- A responsive one page layout built with React 
+- Database management functionality via custom web API
+- Database storage via MongoDB
 ## Getting Started
 Below are instructions on how to try out this React app for yourself.
-### Prerequisites
-You will need to Node.js to run the server on your own machine. 
-(Optional) You will want to use Git to pull from this repository, otherwise you will need to download as a .zip file.
-### Installation Using Git
+#### Prerequisites
+You will need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/download/) to pull from this repository and run the server on your own machine. 
+#### Installation Using Git
 First, go to the folder or workspace that you want to clone the repository into:
 ```bash
 cd C:\myprojects
@@ -32,3 +31,4 @@ npm install
 # Start development server
 npm start
 ```
+Once it has successfuly compiled, you can go to http://localhost:3000/ to see the development server in action.
