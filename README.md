@@ -1,9 +1,9 @@
 # Vehicle Database Manager
-Vehicle Database Manager is a React app that uses my online web API to pull from a personal MongoDB database to populate and manage a list of cars.
+Vehicle Database Manager is a React app that uses my online REST API to pull from a personal MongoDB database to populate and manage a list of cars.
 ## Features :zap:
 - A responsive one page layout built with React 
 - Database management functionality via custom web API
-- Database storage via MongoDB
+- Database cloud storage via MongoDB
 ## Getting Started :arrow_forward:
 Below are instructions on how to try out this React app for yourself.
 ### Prerequisites :white_check_mark:  
